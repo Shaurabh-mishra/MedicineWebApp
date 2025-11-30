@@ -1,0 +1,17 @@
+F:\MyProject\MedicineWebApp\MedAppBackend\MedApp.Services\bin\Debug\net8.0\MedApp.Services.deps.json
+F:\MyProject\MedicineWebApp\MedAppBackend\MedApp.Services\bin\Debug\net8.0\MedApp.Services.dll
+F:\MyProject\MedicineWebApp\MedAppBackend\MedApp.Services\bin\Debug\net8.0\MedApp.Services.pdb
+F:\MyProject\MedicineWebApp\MedAppBackend\MedApp.Services\bin\Debug\net8.0\MedApp.Core.dll
+F:\MyProject\MedicineWebApp\MedAppBackend\MedApp.Services\bin\Debug\net8.0\MedApp.Infrastructure.dll
+F:\MyProject\MedicineWebApp\MedAppBackend\MedApp.Services\bin\Debug\net8.0\MedApp.Core.pdb
+F:\MyProject\MedicineWebApp\MedAppBackend\MedApp.Services\bin\Debug\net8.0\MedApp.Infrastructure.pdb
+F:\MyProject\MedicineWebApp\MedAppBackend\MedApp.Services\obj\Debug\net8.0\MedApp.Services.csproj.AssemblyReference.cache
+F:\MyProject\MedicineWebApp\MedAppBackend\MedApp.Services\obj\Debug\net8.0\MedApp.Services.GeneratedMSBuildEditorConfig.editorconfig
+F:\MyProject\MedicineWebApp\MedAppBackend\MedApp.Services\obj\Debug\net8.0\MedApp.Services.AssemblyInfoInputs.cache
+F:\MyProject\MedicineWebApp\MedAppBackend\MedApp.Services\obj\Debug\net8.0\MedApp.Services.AssemblyInfo.cs
+F:\MyProject\MedicineWebApp\MedAppBackend\MedApp.Services\obj\Debug\net8.0\MedApp.Services.csproj.CoreCompileInputs.cache
+F:\MyProject\MedicineWebApp\MedAppBackend\MedApp.Services\obj\Debug\net8.0\MedApp.S.3B18627C.Up2Date
+F:\MyProject\MedicineWebApp\MedAppBackend\MedApp.Services\obj\Debug\net8.0\MedApp.Services.dll
+F:\MyProject\MedicineWebApp\MedAppBackend\MedApp.Services\obj\Debug\net8.0\refint\MedApp.Services.dll
+F:\MyProject\MedicineWebApp\MedAppBackend\MedApp.Services\obj\Debug\net8.0\MedApp.Services.pdb
+F:\MyProject\MedicineWebApp\MedAppBackend\MedApp.Services\obj\Debug\net8.0\ref\MedApp.Services.dll

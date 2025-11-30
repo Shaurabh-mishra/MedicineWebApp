@@ -1,0 +1,11 @@
+F:\MyProject\MedicineWebApp\MedAppBackend\MedApp.Core\bin\Debug\net8.0\MedApp.Core.deps.json
+F:\MyProject\MedicineWebApp\MedAppBackend\MedApp.Core\bin\Debug\net8.0\MedApp.Core.dll
+F:\MyProject\MedicineWebApp\MedAppBackend\MedApp.Core\bin\Debug\net8.0\MedApp.Core.pdb
+F:\MyProject\MedicineWebApp\MedAppBackend\MedApp.Core\obj\Debug\net8.0\MedApp.Core.GeneratedMSBuildEditorConfig.editorconfig
+F:\MyProject\MedicineWebApp\MedAppBackend\MedApp.Core\obj\Debug\net8.0\MedApp.Core.AssemblyInfoInputs.cache
+F:\MyProject\MedicineWebApp\MedAppBackend\MedApp.Core\obj\Debug\net8.0\MedApp.Core.AssemblyInfo.cs
+F:\MyProject\MedicineWebApp\MedAppBackend\MedApp.Core\obj\Debug\net8.0\MedApp.Core.csproj.CoreCompileInputs.cache
+F:\MyProject\MedicineWebApp\MedAppBackend\MedApp.Core\obj\Debug\net8.0\MedApp.Core.dll
+F:\MyProject\MedicineWebApp\MedAppBackend\MedApp.Core\obj\Debug\net8.0\refint\MedApp.Core.dll
+F:\MyProject\MedicineWebApp\MedAppBackend\MedApp.Core\obj\Debug\net8.0\MedApp.Core.pdb
+F:\MyProject\MedicineWebApp\MedAppBackend\MedApp.Core\obj\Debug\net8.0\ref\MedApp.Core.dll

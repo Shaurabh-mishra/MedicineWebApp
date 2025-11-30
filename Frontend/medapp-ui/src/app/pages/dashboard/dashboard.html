@@ -1,0 +1,16 @@
+<div class="dashboard-page">
+    <div class="card mb-3">
+        <div class="card-body">
+            <h5 class="card-title">Welcome{{ userName ? (', ' + userName) : '' }}!</h5>
+            <p class="card-text text-muted" *ngIf="userEmail">{{ userEmail }}</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-body">
+            <h6 class="card-subtitle mb-2 text-muted">Statistics</h6>
+            <div *ngIf="loading">Loading medicines...</div>
+            <div *ngIf="!loading">Total medicines: <strong>{{ medCount ?? '-' }}</strong></div>
+        </div>
+    </div>
+</div>

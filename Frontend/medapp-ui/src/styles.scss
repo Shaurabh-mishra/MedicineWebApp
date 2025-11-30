@@ -1,0 +1,18 @@
+@import "bootstrap/dist/css/bootstrap.min.css";
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+
+    overflow-x: auto;
+    /* allow horizontal scroll at high zoom */
+    overflow-y: auto;
+    /* allow vertical scroll at high zoom */
+
+    background: linear-gradient(135deg, #d9e6ff, #e9e3ff, #d1e4ff, #e5eaff);
+    background-size: cover;
+    background-repeat: no-repeat;
+}

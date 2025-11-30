@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "0oyvJ8mZVvZFRdwjmqcsPj4i/KUgmWmXEyiZKM0NGK4=",
+  "Source": "MedApp.Api",
+  "BasePath": "_content/MedApp.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

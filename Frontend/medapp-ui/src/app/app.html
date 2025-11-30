@@ -1,0 +1,14 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark px-3" *ngIf="showNavbar()">
+  <a class="navbar-brand" routerLink="/">MedApp</a>
+  <ul class="navbar-nav ms-3">
+    <li class="nav-item"><a class="nav-link" routerLink="/dashboard">Dashboard</a></li>
+    <li class="nav-item"><a class="nav-link" routerLink="/medicines">Medicines</a></li>
+    <li class="nav-item"><a class="nav-link" routerLink="/about">About</a></li>
+  </ul>
+
+  <button class="btn btn-outline-light ms-auto" (click)="logout()">Logout</button>
+</nav>
+
+<div class="page-wrapper">
+  <router-outlet></router-outlet>
+</div>

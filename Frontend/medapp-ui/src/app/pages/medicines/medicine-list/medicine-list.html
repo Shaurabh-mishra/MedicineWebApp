@@ -1,0 +1,122 @@
+<div class="medicine-page">
+    <div class="header d-flex align-items-center justify-content-between mb-3">
+        <h2 class="m-0">Medicines</h2>
+        <div>
+            <button class="btn btn-sm btn-success me-2" (click)="startAdd()" *ngIf="!newModel && !newSaving">+
+                Add</button>
+            <button class="btn btn-sm btn-success me-2" disabled *ngIf="newSaving">Adding...</button>
+            <!-- Set Test Token removed -->
+        </div>
+    </div>
+
+    <!-- Removed global loading indicator so table can render as soon as data arrives -->
+    <div *ngIf="error" class="text-danger">{{ error }}</div>
+    <div *ngIf="statusMsg" class="text-info mb-2">{{ statusMsg }}</div>
+
+    <!-- debug removed -->
+
+    <!-- Toasts -->
+    <div class="toast-wrapper position-fixed top-0 end-0 p-3" style="z-index:1050">
+        <div *ngFor="let t of toasts" class="mb-2">
+            <div
+                [ngClass]="{'alert': true, 'alert-success': t.type === 'success', 'alert-info': t.type === 'info', 'alert-danger': t.type === 'danger'}">
+                {{ t.msg }}</div>
+        </div>
+    </div>
+    <!-- debug dump removed; table will display medicines only -->
+
+    <!-- Show table as soon as we have medicines or when adding a new row. Do not hide the table while loading. -->
+    <table class="table table-striped" *ngIf="(medicines.length > 0) || newModel">
+        <thead>
+            <tr>
+                <th style="width:1%">Actions</th>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Company</th>
+                <th>Price</th>
+                <th>Stock</th>
+                <th>Expiry</th>
+                <th>Created</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- editable new row -->
+            <tr *ngIf="newModel">
+                <td>
+                    <div class="d-flex flex-column">
+                        <div>
+                            <button class="btn btn-sm btn-primary me-1" (click)="saveNew()" [disabled]="newSaving">{{
+                                newSaving ? 'Saving...' : 'Save' }}</button>
+                            <button class="btn btn-sm btn-outline-secondary" (click)="cancelAdd()"
+                                [disabled]="newSaving">Cancel</button>
+                        </div>
+                    </div>
+                </td>
+                <td>-</td>
+                <td><input class="form-control form-control-sm" [(ngModel)]="newModel.name" /></td>
+                <td><input class="form-control form-control-sm" [(ngModel)]="newModel.company" /></td>
+                <td><input type="number" step="0.01" class="form-control form-control-sm"
+                        [(ngModel)]="newModel.price" /></td>
+                <td><input type="number" class="form-control form-control-sm" [(ngModel)]="newModel.stock" /></td>
+                <td><input type="datetime-local" class="form-control form-control-sm"
+                        [(ngModel)]="newModel.expiryDate" /></td>
+                <td>-</td>
+            </tr>
+
+            <!-- existing rows -->
+            <tr *ngFor="let m of medicines">
+                <td style="white-space:nowrap;">
+                    <ng-container *ngIf="editingId !== m.medicineId">
+                        <button class="btn btn-sm btn-outline-primary me-1" (click)="startEdit(m)"
+                            [disabled]="newSaving || editSaving || deleting">Edit</button>
+                        <button class="btn btn-sm btn-outline-danger" (click)="remove(m.medicineId)"
+                            [disabled]="deleting">{{ deleting ? 'Deleting...' : 'Delete' }}</button>
+                    </ng-container>
+                    <ng-container *ngIf="editingId === m.medicineId">
+                        <button class="btn btn-sm btn-success me-1" (click)="saveEdit()" [disabled]="editSaving">{{
+                            editSaving ? 'Saving...' : 'Save' }}</button>
+                        <button class="btn btn-sm btn-outline-secondary" (click)="cancelEdit()"
+                            [disabled]="editSaving">Cancel</button>
+                    </ng-container>
+                </td>
+
+                <td>{{ m.medicineId }}</td>
+
+                <td>
+                    <ng-container *ngIf="editingId !== m.medicineId">{{ m.name }}</ng-container>
+                    <ng-container *ngIf="editingId === m.medicineId && editModel as em"><input
+                            class="form-control form-control-sm" [(ngModel)]="em.name" /></ng-container>
+                </td>
+
+                <td>
+                    <ng-container *ngIf="editingId !== m.medicineId">{{ m.company }}</ng-container>
+                    <ng-container *ngIf="editingId === m.medicineId && editModel as em"><input
+                            class="form-control form-control-sm" [(ngModel)]="em.company" /></ng-container>
+                </td>
+
+                <td>
+                    <ng-container *ngIf="editingId !== m.medicineId">{{ m.price | number:'1.2-2' }}</ng-container>
+                    <ng-container *ngIf="editingId === m.medicineId && editModel as em"><input type="number" step="0.01"
+                            class="form-control form-control-sm" [(ngModel)]="em.price" /></ng-container>
+                </td>
+
+                <td>
+                    <ng-container *ngIf="editingId !== m.medicineId">{{ m.stock }}</ng-container>
+                    <ng-container *ngIf="editingId === m.medicineId && editModel as em"><input type="number"
+                            class="form-control form-control-sm" [(ngModel)]="em.stock" /></ng-container>
+                </td>
+
+                <td>
+                    <ng-container *ngIf="editingId !== m.medicineId">{{ m.expiryDate ? (m.expiryDate |
+                        date:'yyyy-MM-dd') : '-' }}</ng-container>
+                    <ng-container *ngIf="editingId === m.medicineId && editModel as em"><input type="datetime-local"
+                            class="form-control form-control-sm" [(ngModel)]="em.expiryDate" /></ng-container>
+                </td>
+
+                <td>{{ m.createdOn ? (m.createdOn | date:'yyyy-MM-dd') : '-' }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div *ngIf="medicines.length === 0 && !newModel" class="text-muted">No medicines found.</div>
+</div>

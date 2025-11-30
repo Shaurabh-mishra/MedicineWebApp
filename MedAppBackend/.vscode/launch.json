@@ -1,0 +1,16 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": ".NET Launch MedApp.Api",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build MedApp.Api",
+            "program": "${workspaceFolder}/MedApp.Api/bin/Debug/net8.0/MedApp.Api.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/MedApp.Api",
+            "stopAtEntry": false,
+            "console": "integratedTerminal"
+        }
+    ]
+}
